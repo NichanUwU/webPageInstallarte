@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ia-cyan: #00F0FF;
+  --ia-purple: #7C3AED;
+  --ia-bg-main: #1B1746;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+body {
+  background-color: #0F0C29;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F0C29;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B2E8A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(27, 23, 70, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Neon text glow */
+.neon-text {
+  color: #00F0FF;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+/* CTA button glow */
+.btn-neon {
+  background: linear-gradient(135deg, #00D4E8, #00F0FF);
+  color: #0F0C29;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
+}
+.btn-neon:hover {
+  box-shadow: 0 0 32px rgba(0, 240, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+/* Grid background dots */
+.bg-dots {
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
