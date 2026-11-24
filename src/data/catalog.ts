@@ -1,6 +1,6 @@
 // ============================================================
 //  InstallArte — Catálogo Central de Datos
-//  Edita este archivo para actualizar precios, productos,
+//  Edita este archivo para actualizar precios, productos, 
 //  número de WhatsApp o activar/desactivar cualquier ítem.
 // ============================================================
 
