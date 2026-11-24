@@ -32,7 +32,7 @@ const ciudades = [
 
 export default function CoverageSection() {
   return (
-    <section id="cobertura" className="bg-[#131033] py-20">
+    <section id="cobertura" className="scroll-mt-24 bg-[#131033] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -64,7 +64,7 @@ export default function CoverageSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid sm:grid-cols-3 gap-6 mb-14">
+        <div className="mb-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {modalidades.map((m, i) => (
             <motion.div
               key={m.title}

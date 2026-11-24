@@ -16,7 +16,7 @@ export default function HeroSection() {
       <div className="absolute bottom-10 left-10 w-72 h-72 bg-purple-600/8 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid w-full min-w-0 grid-cols-1 items-center gap-12 lg:grid-cols-2">
           {/* Left: Copy */}
           <div>
             <motion.div
@@ -68,7 +68,7 @@ export default function HeroSection() {
                 Cotizar por WhatsApp
               </a>
               <a
-                href="#cotizador"
+                href="/#cotizador"
                 className="flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold border border-white/20 text-white/80 hover:border-[#00F0FF]/50 hover:text-white transition-all duration-200"
               >
                 Armar mi paquete
@@ -101,8 +101,8 @@ export default function HeroSection() {
 
           {/* Right: Featured cards */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
             className="flex flex-col gap-4"
           >

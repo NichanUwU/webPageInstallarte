@@ -3,29 +3,29 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CATALOG } from "@/data/catalog";
-import type { ServiceCategory } from "@/data/catalog";
 import ServiceCard from "@/components/ui/ServiceCard";
 
-type TabId = "todos" | ServiceCategory;
+type TabId = "todos" | "software" | "mantenimiento";
 
 const TABS: { id: TabId; label: string }[] = [
   { id: "todos", label: "Todos" },
   { id: "software", label: "Software y Activación" },
   { id: "mantenimiento", label: "Mantenimiento y Upgrade" },
-  { id: "especializado", label: "Gamer, Web y Domótica" },
-  { id: "tienda", label: "Tienda / Accesorios" },
 ];
 
 export default function CatalogSection() {
   const [activeTab, setActiveTab] = useState<TabId>("todos");
+  const serviceItems = CATALOG.filter(
+    (item) => item.category === "software" || item.category === "mantenimiento"
+  );
 
   const filtered =
     activeTab === "todos"
-      ? CATALOG
-      : CATALOG.filter((item) => item.category === activeTab);
+      ? serviceItems
+      : serviceItems.filter((item) => item.category === activeTab);
 
   return (
-    <section id="catalogo" className="bg-[#131033] py-20">
+    <section id="servicios" className="scroll-mt-24 bg-[#131033] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-10">
@@ -57,12 +57,12 @@ export default function CatalogSection() {
         </div>
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
+        <div className="mb-10 flex flex-wrap justify-center gap-2">
           {TABS.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+              className={`max-w-full break-words px-4 py-2 rounded-full text-center text-sm font-semibold transition-all duration-200 ${
                 activeTab === tab.id
                   ? "btn-neon"
                   : "border border-white/15 text-white/60 hover:border-[#00F0FF]/40 hover:text-white"
@@ -81,7 +81,7 @@ export default function CatalogSection() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
+            className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
           >
             {filtered.map((item, i) => (
               <ServiceCard key={item.id} item={item} index={i} />

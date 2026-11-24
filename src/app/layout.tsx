@@ -23,7 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className="w-full max-w-full overflow-x-hidden">
+        <div className="w-full max-w-full overflow-x-hidden">{children}</div>
+      </body>
     </html>
   );
 }

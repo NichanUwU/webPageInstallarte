@@ -13,7 +13,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat de WhatsApp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-neon-cyan"
+      className="fixed bottom-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full shadow-neon-cyan sm:bottom-6 sm:right-6 sm:h-14 sm:w-14"
       style={{ background: "linear-gradient(135deg, #00D4E8, #00F0FF)" }}
       whileHover={{ scale: 1.12 }}
       whileTap={{ scale: 0.95 }}

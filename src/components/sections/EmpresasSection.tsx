@@ -31,7 +31,7 @@ export default function EmpresasSection() {
   };
 
   return (
-    <section id="empresas" className="bg-[#0F0C29] py-20">
+    <section id="empresas" className="scroll-mt-24 bg-[#0F0C29] py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-14">
@@ -69,7 +69,7 @@ export default function EmpresasSection() {
             <Building2 size={14} className="text-[#00F0FF]" />
             Pólizas PyME — Soporte continuo
           </p>
-          <div className="grid sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {polizas.map((item, i) => (
               <motion.div
                 key={item.id}
@@ -124,7 +124,7 @@ export default function EmpresasSection() {
             <Cpu size={14} className="text-[#00F0FF]" />
             Servicios especializados
           </p>
-          <div className="grid sm:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {otros.map((item, i) => (
               <motion.div
                 key={item.id}

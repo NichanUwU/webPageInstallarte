@@ -1,27 +1,21 @@
-"use client";
-
-import Navbar from "@/components/ui/Navbar";
-import HeroSection from "@/components/sections/HeroSection";
-import CatalogSection from "@/components/sections/CatalogSection";
-import QuoterSection from "@/components/sections/QuoterSection";
-import EmpresasSection from "@/components/sections/EmpresasSection";
-import CoverageSection from "@/components/sections/CoverageSection";
-import GuaranteeSection from "@/components/sections/GuaranteeSection";
-import Footer from "@/components/ui/Footer";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
+import Hero from "@/components/Hero";
+import ServiceCatalog from "@/components/ServiceCatalog";
+import PackageBuilder from "@/components/PackageBuilder";
+import HowWeWork from "@/components/HowWeWork";
 
 export default function Home() {
   return (
-    <main className="relative overflow-x-hidden">
+    <main className="relative w-full max-w-full overflow-x-hidden">
       <Navbar />
-      <HeroSection />
-      <CatalogSection />
-      <QuoterSection />
-      <EmpresasSection />
-      <CoverageSection />
-      <GuaranteeSection />
+      <Hero />
+      <ServiceCatalog />
+      <PackageBuilder />
+      <HowWeWork />
       <Footer />
-      <WhatsAppButton />
+      <WhatsAppFloat />
     </main>
   );
 }

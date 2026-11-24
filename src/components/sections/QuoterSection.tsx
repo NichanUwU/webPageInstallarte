@@ -69,7 +69,7 @@ export default function QuoterSection() {
   const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWaMessage())}`;
 
   return (
-    <section id="cotizador" className="bg-[#1B1746] py-20">
+    <section id="cotizador" className="scroll-mt-24 bg-[#1B1746] py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-12">
@@ -101,13 +101,13 @@ export default function QuoterSection() {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8 items-start">
+        <div className="grid w-full grid-cols-1 items-start gap-8 lg:grid-cols-5">
           {/* Checklist */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-3 glass border border-white/8 rounded-2xl p-6"
+            className="min-w-0 lg:col-span-3 glass border border-white/8 rounded-2xl p-4 sm:p-6"
           >
             <p className="text-sm font-semibold text-white/60 mb-4 uppercase tracking-wide">
               Servicios disponibles
@@ -118,7 +118,7 @@ export default function QuoterSection() {
                 return (
                   <label
                     key={item.id}
-                    className={`flex items-center gap-4 p-3 rounded-xl cursor-pointer transition-all duration-150 ${
+                    className={`flex min-w-0 items-center gap-3 p-3 rounded-xl cursor-pointer transition-all duration-150 sm:gap-4 ${
                       checked
                         ? "bg-[#00F0FF]/10 border border-[#00F0FF]/30"
                         : "border border-transparent hover:bg-white/4"
@@ -154,8 +154,8 @@ export default function QuoterSection() {
                         </svg>
                       )}
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-semibold text-white leading-tight truncate">
+                    <div className="min-w-0 flex-1">
+                      <p className="break-words text-sm font-semibold leading-tight text-white">
                         {item.title}
                       </p>
                       {item.badge && (
@@ -163,7 +163,7 @@ export default function QuoterSection() {
                       )}
                     </div>
                     <div className="text-right shrink-0">
-                      <span className="text-sm font-bold text-white">
+                      <span className="max-w-[7rem] break-words text-sm font-bold text-white sm:max-w-none">
                         {formatServicePrice(item)}
                       </span>
                       {item.requiresPartQuote && (
@@ -178,10 +178,10 @@ export default function QuoterSection() {
 
           {/* Summary */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 glass border border-[#00F0FF]/20 rounded-2xl p-6 sticky top-20"
+            className="min-w-0 lg:col-span-2 glass border border-[#00F0FF]/20 rounded-2xl p-4 sm:p-6 lg:sticky lg:top-20"
           >
             <div className="flex items-center gap-2 mb-5">
               <Calculator size={18} className="text-[#00F0FF]" />

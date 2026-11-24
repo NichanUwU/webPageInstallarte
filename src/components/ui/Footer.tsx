@@ -4,11 +4,11 @@ import { Facebook, MessageCircle, MapPin } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/data/catalog";
 
 const links = [
-  { label: "Servicios", href: "#catalogo" },
-  { label: "Arma tu Paquete", href: "#cotizador" },
-  { label: "Empresas", href: "#empresas" },
-  { label: "Tienda", href: "#catalogo" },
-  { label: "Cobertura", href: "#cobertura" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Arma tu Paquete", href: "/#cotizador" },
+  { label: "Empresas", href: "/empresas" },
+  { label: "Tienda", href: "/tienda" },
+  { label: "Cobertura", href: "/#cobertura" },
 ];
 
 export default function Footer() {
