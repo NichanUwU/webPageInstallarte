@@ -5,7 +5,7 @@
 // ============================================================
 
 /** Número de WhatsApp sin el símbolo +  (incluye código de país 52) */
-export const WHATSAPP_NUMBER = "5219610000000";
+export const WHATSAPP_NUMBER = "5219625999763";
 
 // ─────────────────────────────────────────────────────────────
 //  Tipos
